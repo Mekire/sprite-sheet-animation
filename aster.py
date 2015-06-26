@@ -9,7 +9,7 @@ BACKGROUND_COLOR = (30, 20, 30)
 
 
 class Loop(object):
-    def __init__(self, sheet, frame_size, fps, rows, columns, missing=0):
+    def __init__(self, sheet, size, fps, rows, columns, missing=0):
         self.delay = 1.0/fps
         self.accumulator = 0.0
         self.frames = self.make_cycle(sheet, size, rows, columns, missing)
