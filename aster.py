@@ -28,9 +28,9 @@ class Loop(object):
     def get_next(self, dt=0):
         self.accumulator += dt
         if not self.frame:
-            self.frame = self.frames.next()
+            self.frame = next(self.frames)
         while self.accumulator >= self.delay:
-            self.frame = self.frames.next()
+            self.frame = next(self.frames)
             self.accumulator -= self.delay
         return self.frame
 
